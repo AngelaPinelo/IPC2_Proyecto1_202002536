@@ -8,6 +8,22 @@ class Piso ():
         self.flip = f
         self.slide= s
         self.next = None
+        self.anterior= None
         #cada node de este tipo "piso" contiene una lista de patrones que almacena la cadena de cada piso 
         #self.pattern = ListaPatrones()
         #self.casillas=Matriz()
+        
+        
+    def getSiguiente(self):
+        return self.next
+
+    
+    def setSiguiente(self, piso):
+        self.next = piso
+
+    def getAnterior(self):
+        return self.anterior
+
+    
+    def setAnterior(self, piso):
+        self.anterior = piso

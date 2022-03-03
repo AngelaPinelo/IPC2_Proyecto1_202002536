@@ -1,3 +1,4 @@
+from PatronesList import ListaPatrones
 #Mi nodo de tipo Piso 
 class Piso ():
     def __init__(self,name, r, c, f,s):
@@ -10,7 +11,7 @@ class Piso ():
         self.next = None
         self.anterior= None
         #cada node de este tipo "piso" contiene una lista de patrones que almacena la cadena de cada piso 
-        #self.pattern = ListaPatrones()
+        self.pattern = ListaPatrones()
         #self.casillas=Matriz()
                 
     def getName(self):

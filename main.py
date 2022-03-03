@@ -1,7 +1,9 @@
 import xml.etree.ElementTree as ET
 from PisosList import ListaPisos
+from PatronesList import ListaPatrones
 
 lista_pisos=ListaPisos()
+lista_patrones=ListaPatrones()
 
 
 def elementTree(ruta):
@@ -30,9 +32,11 @@ def elementTree(ruta):
         for patron in patrones:
             code=patron.attrib['codigo'].replace('\n','')
             cadena=patron.text.replace('\n','')
+            patronNode=lista_patrones.insertarPatronLast(code,cadena)
            
         
 
     
 elementTree('pisos.xml')
 lista_pisos.mostrarPisos()
+lista_patrones.mostrarPatrones()

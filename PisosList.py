@@ -32,7 +32,7 @@ class ListaPisos():
     def mostrarPisos (self):
         tmp= self.first
         while tmp is not None:
-            print('Nombre del piso:', tmp.name, 'Número de filas:', tmp.r, 'Número de columnas', tmp.c, 'Precio flip: Q', tmp.f,'Precio del slide: Q', tmp.s)
+            print('Nombre del piso:', tmp.name, 'Número de filas:', tmp.rows, 'Número de columnas', tmp.colums, 'Precio flip: Q', tmp.flip,'Precio del slide: Q', tmp.slide)
             tmp=tmp.getSiguiente()
             
             

@@ -20,5 +20,5 @@ class ListaPatrones():
     def mostrarPatrones(self):
         tmp= self.primero
         while tmp is not None:
-            print('Código del piso:', tmp.code, 'cadena:', tmp.cadena)
+            print('Código del piso:', tmp.code, 'Cadena:', tmp.cadena)
             tmp=tmp.getSiguiente()

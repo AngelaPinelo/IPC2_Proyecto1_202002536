@@ -10,7 +10,7 @@
         <patron codigo="cod12">BWBWWWWW</patron>
     </patrones>
     </piso>
-    <piso nombre="ejemplo02">
+    <piso nombre="angel">
     <R> 3 </R>
     <C> 3 </C>
     <F> 1 </F>

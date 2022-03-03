@@ -11,8 +11,6 @@ def elementTree(ruta):
     piso = tree.getroot()
    #para mi nodo piso
     for n in piso:
-        nombre= n.attrib['nombre']
-        name=nombre
         rows= n[0]
         fila=rows.text
         fila=int(fila)
@@ -26,17 +24,17 @@ def elementTree(ruta):
         s=slide.text
         s=int(s)
         pisoNode=lista_pisos.insertNodeLast(n.attrib['nombre'],fila,c,f,s)
-        #print('Se insertó el siguiente piso:', pisoNode.getName())
-        #para mi nodo patron7
+        #para mi nodo patron
         patrones= n[4]
         for patron in patrones:
             code=patron.attrib['codigo'].replace('\n','')
             cadena=patron.text.replace('\n','')
+            cadena=cadena.replace(' ','')
             patronNode=lista_patrones.insertarPatronLast(code,cadena)
            
         
-
     
 elementTree('pisos.xml')
+lista_pisos.OrdenamientoBurbuja2()
 lista_pisos.mostrarPisos()
 lista_patrones.mostrarPatrones()

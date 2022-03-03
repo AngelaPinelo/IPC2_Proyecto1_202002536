@@ -34,5 +34,48 @@ class ListaPisos():
         while tmp is not None:
             print('Nombre del piso:', tmp.name, 'Número de filas:', tmp.rows, 'Número de columnas', tmp.colums, 'Precio flip: Q', tmp.flip,'Precio del slide: Q', tmp.slide)
             tmp=tmp.getSiguiente()
-            
+    
+    '''def OrdenamientoBurbuja (self):
+        verificar=self.first
+        aux = self.first 
+        if verificar != None and aux != None : 
+            i = self.first 
+            while i != None: 
+                j= i.next
+                while j != None:
+                    if i.name > j.name:
+                        temporal = i.name
+                        i.name = j.name
+                        j.name = temporal
+                    j = j.next
+                i = i.next'''
+    
+    def OrdenamientoBurbuja2(self):
+        if self.size > 1:
+            while True:
+                actual = self.first
+                i = None  # anterior
+                j = self.first.next  # siguiente
+                cambio = False
+                while j != None:
+                    if actual.name > j.name:
+                        cambio = True
+                        if i != None:
+                            tmp = j.next
+                            i.next = j
+                            j.next = actual
+                            actual.next = tmp
+                        else:
+                            tmp2 = j.next
+                            self.first = j
+                            j.next = actual
+                            actual.next = tmp2
+                        i = j
+                        j = actual.next
+                    else:
+                        i = actual
+                        actual = j
+                        j = j.next
+                if not cambio:
+                    break
             

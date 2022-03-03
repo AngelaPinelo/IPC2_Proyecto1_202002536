@@ -28,10 +28,9 @@ def elementTree(ruta):
         #para mi nodo patron7
         patrones= n[4]
         for patron in patrones:
-            code=patron.attrib['codigo']
-            cadena=patron.text
-            print(code)
-            print(cadena)
+            code=patron.attrib['codigo'].replace('\n','')
+            cadena=patron.text.replace('\n','')
+           
         
 
     

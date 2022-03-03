@@ -23,8 +23,9 @@ def elementTree(ruta):
         slide=n[3]
         s=slide.text
         s=int(s)
-        pisoNode=lista_pisos.insertNodeLast(name,r,c,f,s)
-        #para mi nodo patron
+        pisoNode=lista_pisos.insertNodeLast(n.attrib['nombre'],r,c,f,s)
+        print('Se insertó el siguiente piso:', pisoNode.getName())
+        #para mi nodo patron7
         patrones= n[4]
         for patron in patrones:
             code=patron.attrib['codigo']

@@ -12,8 +12,13 @@ class Piso ():
         #cada node de este tipo "piso" contiene una lista de patrones que almacena la cadena de cada piso 
         #self.pattern = ListaPatrones()
         #self.casillas=Matriz()
-        
-        
+                
+    def getName(self):
+        return self.name
+    
+    def setName(self, name):
+        self.name = name   
+           
     def getSiguiente(self):
         return self.next
     

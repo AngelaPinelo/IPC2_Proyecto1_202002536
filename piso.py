@@ -16,14 +16,12 @@ class Piso ():
         
     def getSiguiente(self):
         return self.next
-
     
     def setSiguiente(self, piso):
         self.next = piso
 
     def getAnterior(self):
         return self.anterior
-
     
     def setAnterior(self, piso):
         self.anterior = piso

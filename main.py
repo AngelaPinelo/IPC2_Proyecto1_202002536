@@ -1,9 +1,11 @@
 import xml.etree.ElementTree as ET
 from PisosList import ListaPisos
 from PatronesList import ListaPatrones
+from ListaCasillas import CasillasList
 
 lista_pisos=ListaPisos()
 lista_patrones=ListaPatrones()
+lista_casillas=CasillasList()
 
 
 def elementTree(ruta):
@@ -31,6 +33,11 @@ def elementTree(ruta):
             cadena=patron.text.replace('\n','')
             cadena=cadena.replace(' ','')
             patronNode=lista_patrones.insertarPatronLast(code,cadena)
+            entrada=patron.text.replace(' ','')
+            entrada=entrada.replace('\n','')
+            for char in entrada:
+                #print (char)
+                casillaNode=lista_casillas.InsertarCasillaFinal(c,fila,char)
            
         
     
@@ -38,3 +45,4 @@ elementTree('pisos.xml')
 lista_pisos.OrdenamientoBurbuja2()
 lista_pisos.mostrarPisos()
 lista_patrones.mostrarPatrones()
+lista_casillas.showCasillas()

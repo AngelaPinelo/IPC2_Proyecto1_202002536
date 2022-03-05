@@ -5,6 +5,7 @@ class Patron():
         #cadena se refiere al WBBW 
         self.cadena = cadena
         self.siguiente=None
+        self.anterior = None 
         
     def getSiguiente(self):
         return self.siguiente

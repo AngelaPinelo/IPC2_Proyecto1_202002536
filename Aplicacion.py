@@ -69,6 +69,7 @@ Selecciona una opcion: ''')
                 lista_patrones.mostrarPatrones()   
             elif opcion =='5': 
                 lista_casillas.showCasillas()
+                lista_casillas.graficarPisito(4,5)
             elif opcion =='6':
                 print("Gracias por usar nuestro sistema :)") 
                 break

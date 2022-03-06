@@ -1,5 +1,5 @@
 from casilla import Casilla 
-#from graphviz import Digraph
+from graphviz import Digraph
 
 class CasillasList():
     def __init__(self):
@@ -31,16 +31,15 @@ class CasillasList():
             print('Coordenada en x:', tmp.coox, 'Coordenada en y:', tmp.cooy, 'Color del Azulejo:', tmp.color)
             tmp=tmp.getSiguiente()
     
-    def graficarPisito(self,x,nuNodos):
-        print("Graficando lista...")
-        
+    def graficarPisito(self,x,enlaces):
+        print("Lista graficad!")
         dot = Digraph('G', filename='process.dot', engine='dot', format='svg')
         dot.attr(rankdir = "TB")
         dot.node_attr.update(shape="box")
         dot.node_attr['style'] = 'filled'
 
-        nodoTemporal = Nodo("",0,0)
-        nodoTemporal = self.head
+        nodoTemporal = Casilla("",0,0)
+        nodoTemporal = self.first
 
         flag = False
         contador = 0
@@ -56,7 +55,7 @@ class CasillasList():
                 flag = False
 
             contador += 1
-            #depende si el nodo es 'B' o 'W'
+            #depende si el nodo es W o B
             if nodoTemporal.color == 'B':
                 c.node(str(contador), "black", color="black", group=str(contador%(x)))
 
@@ -68,15 +67,17 @@ class CasillasList():
                 flag = True
                 
 
-            nodoTemporal = nodoTemporal.siguiente
+            nodoTemporal = nodoTemporal.getSiguiente()
 
         #ahora trabajamos con el contador de 0 -> contador
         for i in range(1,contador):
-            if i+x <= nuNodos:
+            if i+x <= enlaces:
                 dot.edge(str(i), str(i+x))
 
             if i%x != 0:
                 dot.edge(str(i), str(i+1))
 
         dot.view()
+        
             
+    

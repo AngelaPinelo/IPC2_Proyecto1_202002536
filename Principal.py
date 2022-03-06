@@ -44,9 +44,19 @@ def elementTree(ruta):
             #para mis casillas 
             entrada=patron.text.replace(' ','')
             entrada=entrada.replace('\n','')
-            for char in entrada:
-                #print (char)
-                casillaNode=lista_casillas.InsertarCasillaFinal(c,fila,char)
+            '''if len(entrada)<= fila:
+                coordenaday=fila 
+            elif len(entrada)>fila:'''
+            for char in entrada:  
+                        '''if char[fila+1]:
+                          coordenaday=fila+1
+                        else:
+                          coordenaday= fila '''
+
+                        
+                    #print (char)
+            
+        casillaNode=lista_casillas.InsertarCasillaFinal(c,fila,char)
         
         
     
@@ -55,4 +65,4 @@ LeerPisos()
 #lista_pisos.OrdenamientoBurbuja2()
 lista_pisos.mostrarPisos()
 #lista_patrones.mostrarPatrones()
-#lista_casillas.showCasillas()
+lista_casillas.showCasillas()

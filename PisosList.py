@@ -30,10 +30,10 @@ class ListaPisos():
             self.last = new_piso
     
     def mostrarPisos (self):
-        tmp= self.first
-        while tmp is not None:
-            print('Nombre del piso:', tmp.name, 'Número de filas:', tmp.rows, 'Número de columnas', tmp.colums, 'Precio flip: Q', tmp.flip,'Precio del slide: Q', tmp.slide)
-            tmp=tmp.getSiguiente()
+        tempo= self.first
+        while tempo != None:
+            print('Nombre del piso:', tempo.name, 'Número de filas:', tempo.rows, 'Número de columnas', tempo.colums, 'Precio flip: Q', tempo.flip,'Precio del slide: Q', tempo.slide)
+            tempo=tempo.getSiguiente()
             
     
     def OrdenamientoBurbuja2(self):
@@ -42,26 +42,26 @@ class ListaPisos():
                 actual = self.first
                 i = None  # anterior
                 j = self.first.next  # siguiente
-                cambio = False
+                batman = False
                 while j != None:
                     if actual.name > j.name:
-                        cambio = True
+                        batman = True
                         if i != None:
-                            tmp = j.next
+                            tempo = j.next
                             i.next = j
                             j.next = actual
-                            actual.next = tmp
+                            actual.next = tempo
                         else:
-                            tmp2 = j.next
+                            tempo2 = j.next
                             self.first = j
                             j.next = actual
-                            actual.next = tmp2
+                            actual.next = tempo2
                         i = j
                         j = actual.next
                     else:
                         i = actual
                         actual = j
                         j = j.next
-                if not cambio:
+                if not batman:
                     break
             

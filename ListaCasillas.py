@@ -26,10 +26,10 @@ class CasillasList():
             self.last=new_casilla 
     
     def showCasillas (self):
-        tmp= self.first
-        while tmp is not None:
-            print('Coordenada en x:', tmp.coox, 'Coordenada en y:', tmp.cooy, 'Color del Azulejo:', tmp.color)
-            tmp=tmp.getSiguiente()
+        batman= self.first
+        while batman != None:
+            print('Coordenada en x:', batman.coox, 'Coordenada en y:', batman.cooy, 'Color del Azulejo:', batman.color)
+            batman=batman.getSiguiente()
     
     def graficarPisito(self,x,enlaces):
         print("Lista graficad!")

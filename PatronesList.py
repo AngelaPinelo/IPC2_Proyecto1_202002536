@@ -19,7 +19,7 @@ class ListaPatrones():
             
     def mostrarPatrones(self):
         #para que guarde temporalmente el "primer Nodo" y así ir mostrándolo a medida que se agregan más 
-        tmp= self.primero
-        while tmp is not None:
-            print('Código del piso:', tmp.code, 'Cadena:', tmp.cadena)
-            tmp=tmp.getSiguiente()
+        batman= self.primero
+        while batman != None:
+            print('Código del piso:', batman.code, 'Cadena:', batman.cadena)
+            batman=batman.getSiguiente()
